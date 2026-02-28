@@ -1,0 +1,57 @@
+body {
+    background-color:#141414 ;
+    color: white;
+    padding: 20px;
+    font-family: Kode Mono, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.show-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.show-card {
+    background-color: #333 ;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.show-card:hover {
+    background-color:#555 ;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.go-back {
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: inline-block;
+
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.watched {
+    color: chartreuse;
+}
+
+.unwatched {
+    color: gray;
+}

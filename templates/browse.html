@@ -1,0 +1,47 @@
+<html>
+
+<head>
+<title> Show Name </title>
+<link
+  href="https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap"
+   rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+<h1> {{ current_folder }} </h1>
+
+<div class = "go-back">
+
+{% if back_path %}
+<a href = "/browse/{{ back_path }}" > &#8592; Go Back </a>
+{% else %}
+<a href = "/"> &larr; Go back </a>
+{% endif %}
+
+</div>
+
+<div class = "show-grid">
+    {% for seasons in contents %}
+    <div class = "show-card">
+    <a href = "/browse/{{folder_path}}/{{seasons}}"> {{display_dict[seasons]}} </a>
+   
+    {% if seasons in watched_dict %}
+        {% if watched_dict[seasons] %}
+            <span class="watched"> Watched </span>
+            <span class="timestamp"> {{ timestamp_dict[seasons] }} </span>
+        {% else %}
+            <span class="unwatched"> Unwatched </span>
+        {% endif %}
+    {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+
+</body>
+
+</html>

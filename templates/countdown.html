@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> Play Next </title>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap"
+   rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1> Playing {{display_name}} In <span id="counter">5</span> Seconds </h1>
+
+<a href = "/browse/{{episode_path}}" > Cancel </a>
+
+
+<script>
+
+let Count = 5
+
+const timer = setInterval(function() {
+    Count = Count-1
+    document.getElementById("counter").innerText = Count
+    if (Count == 0) {
+    clearInterval(timer);
+    }   
+    }, 1000);
+
+
+
+
+
+
+setTimeout(function() {
+    window.location.href = "/browse/{{next_episode}}";
+}, 5000);
+
+
+</script>
+
+</body>
+
+
+
+
+</html>

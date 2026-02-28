@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> MediaPlayer </title>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Kode+Mono&display=swap"
+   rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+
+<body>
+
+<h1> Available Series </h1>
+
+ <div class="show-grid">
+      {% for show in options %}
+      <div class="show-card">
+          <a href="/browse/{{ show }}"><img src="{{ image_dict[show] }}" alt="{{ show }}"> {{ show }} </a>
+      </div>
+      {% endfor %}
+  </div>
+ 
+</body>
+</html>
